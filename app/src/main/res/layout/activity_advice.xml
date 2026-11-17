@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/cream" android:orientation="vertical">
+
+    <!-- 顶部标题栏：返回 + 标题 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:gravity="center_vertical" android:orientation="horizontal"
+        android:paddingHorizontal="12dp" android:background="@color/cream"
+        android:elevation="2dp">
+        <TextView android:id="@+id/back_button" android:layout_width="48dp" android:layout_height="48dp"
+            android:gravity="center" android:text="←" android:textSize="26sp" android:textColor="@color/forest"
+            android:contentDescription="返回" android:clickable="true" android:focusable="true"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical" android:layout_marginStart="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="AI 植物问诊" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/forest"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="联网看图诊断 · 用药建议" android:textSize="11sp" android:textColor="@color/muted"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 作物信息卡片 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingBottom="8dp">
+        <TextView android:id="@+id/crop_detail" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="14sp" android:textStyle="bold" android:textColor="@color/forest"/>
+        <TextView android:id="@+id/advice_result" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="2dp" android:textSize="12sp" android:textColor="@color/muted"/>
+    </LinearLayout>
+
+    <!-- 聊天记录区 -->
+    <ScrollView android:id="@+id/chat_scroll" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:fillViewport="true" android:clipToPadding="false"
+        android:paddingHorizontal="14dp" android:paddingBottom="8dp">
+        <LinearLayout android:id="@+id/chat_messages" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical"/>
+    </ScrollView>
+
+    <!-- 状态提示 -->
+    <TextView android:id="@+id/chat_status" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp" android:paddingTop="2dp" android:textSize="12sp" android:textColor="@color/muted"/>
+
+    <!-- 已选照片预览条：照片缩略图 + 删除按钮，默认隐藏 -->
+    <LinearLayout android:id="@+id/photo_attachment"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingHorizontal="14dp" android:paddingBottom="4dp"
+        android:visibility="gone">
+        <ImageView android:id="@+id/photo_preview"
+            android:layout_width="48dp" android:layout_height="48dp"
+            android:scaleType="centerCrop" android:background="?attr/colorSurface"
+            android:contentDescription="已选病叶照片"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/remove_photo_button"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginStart="8dp" android:text="移除照片" android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- 底部输入栏：拍照按钮 + 输入框 + 发送 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp" android:layout_marginTop="6dp" android:layout_marginBottom="4dp"
+        android:gravity="bottom" android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton android:id="@+id/photo_button"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="48dp" android:layout_height="48dp"
+            app:icon="@android:drawable/ic_menu_camera" app:iconSize="24dp"
+            android:contentDescription="拍病叶照片"/>
+        <EditText android:id="@+id/chat_input" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:minHeight="48dp" android:maxHeight="120dp" android:layout_marginStart="4dp"
+            android:background="?attr/colorSurface" android:gravity="top|start"
+            android:hint="描述症状，或拍病叶照片…"
+            android:inputType="textCapSentences|textMultiLine" android:maxLines="4" android:padding="12dp"
+            android:textSize="15sp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/chat_send_button"
+            android:layout_width="wrap_content" android:layout_height="48dp" android:layout_marginStart="8dp"
+            android:minWidth="64dp" android:text="发送" android:textSize="14sp"/>
+    </LinearLayout>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp" android:paddingTop="2dp" android:paddingBottom="10dp"
+        android:text="AI 诊断仅供参考。用药前请核对作物与防治对象登记、产品标签和采收安全间隔期。"
+        android:textSize="11sp" android:textColor="@color/muted"/>
+</LinearLayout>

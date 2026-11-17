@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.QiMo413" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/forest</item>
+        <item name="colorSecondary">@color/leaf</item>
+        <item name="android:statusBarColor">@color/forest</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+    </style>
+
+    <style name="Theme.QiMo413" parent="Base.Theme.QiMo413" />
+</resources>

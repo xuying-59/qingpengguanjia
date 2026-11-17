@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginBottom="18dp" android:orientation="vertical">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent" android:layout_height="180dp"
+        app:cardCornerRadius="14dp" app:cardElevation="0dp">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/crop_carousel" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:contentDescription="温室照片轮播"/>
+            <TextView android:id="@+id/crop_carousel_caption"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_gravity="bottom" android:background="#AA263126"
+                android:paddingHorizontal="14dp" android:paddingVertical="9dp"
+                android:text="温室里的西红柿" android:textColor="@color/white"
+                android:textSize="14sp"/>
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView android:id="@+id/crop_carousel_position"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="7dp" android:gravity="center"
+        android:text="● ○ ○" android:textColor="@color/muted" android:textSize="12sp"/>
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="让每一滴水，都用在生长上。"
+            android:textSize="26sp" android:textStyle="bold" android:textColor="@color/forest" android:layout_marginBottom="18dp"/>
+        <include layout="@layout/view_crop_carousel"/>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/weather_card" android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:cardCornerRadius="12dp" app:cardElevation="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="20dp" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/outdoor_weather" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/forest"/>
+                <TextView android:id="@+id/weather_value" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/weather_loading" android:textSize="25sp" android:textStyle="bold" android:textColor="@color/black"/>
+                <TextView android:id="@+id/weather_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Open-Meteo" android:textSize="12sp" android:textColor="@color/muted"/>
+                <TextView android:id="@+id/weather_climate" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/weather_crop_loading" android:textSize="13sp" android:lineSpacingExtra="3dp" android:textColor="@color/forest"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/weather_location_button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/weather_location" android:minHeight="48dp"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/weather_region_button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:text="@string/weather_region" android:minHeight="48dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="10dp"
+            android:text="@string/indoor_demo" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/forest"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <include layout="@layout/item_temperature"/><include layout="@layout/item_humidity"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="10dp">
+            <include layout="@layout/item_soil"/><include layout="@layout/item_light"/>
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/edit_sensor_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="修改模拟监测数据" />
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" app:cardCornerRadius="20dp" app:cardElevation="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="18dp" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/crop_title" android:textStyle="bold" android:textColor="@color/forest" android:textSize="16sp"/>
+                <Spinner android:id="@+id/crop_spinner" android:layout_width="match_parent" android:layout_height="48dp"/>
+                <TextView android:id="@+id/crop_temperature_range" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textColor="@color/forest" android:textStyle="bold" android:textSize="15sp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/recognize_crop_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/recognize_crop"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/recognize_privacy" android:textSize="12sp" android:textColor="@color/muted"/>
+                <TextView android:id="@+id/threshold_comparison" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textSize="14sp" android:lineSpacingExtra="4dp" android:textColor="@color/forest"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="温湿度预设参考作物栽培资料；土壤湿度和光照为演示值，需按传感器标定。可手动调整。" android:textSize="12sp" android:textColor="@color/muted"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/threshold_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="设置当前作物阈值" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/advice_title" android:textStyle="bold" android:textColor="@color/forest" android:textSize="16sp"/>
+                <TextView android:id="@+id/advice_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/muted" android:textSize="14sp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/detail_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/view_detail"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="提示：棚内数据为演示值，真实生产需接入传感器。" android:textSize="12sp" android:textColor="@color/muted"/>
+    </LinearLayout>
+</ScrollView>

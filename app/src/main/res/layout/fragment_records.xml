@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="18dp" android:orientation="vertical">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="大棚历史记录" android:textSize="23sp" android:textStyle="bold" android:textColor="@color/forest"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/record_hint" android:textColor="@color/muted" android:textSize="13sp"/>
+    <TextView android:id="@+id/empty_records" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/record_empty" android:textColor="@color/muted" android:gravity="center"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/records_list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="16dp"/>
+</LinearLayout>

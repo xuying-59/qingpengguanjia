@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="@color/cream">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:minHeight="680dp" android:orientation="vertical" android:padding="28dp"
+        android:gravity="center_vertical">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🌱" android:textSize="56sp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:text="@string/login_title" android:textSize="32sp"
+            android:textStyle="bold" android:textColor="@color/forest"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="@string/login_subtitle"
+            android:textSize="15sp" android:textColor="@color/muted"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="42dp" android:hint="@string/username_hint">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="text" android:singleLine="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:hint="@string/password_hint" app:endIconMode="password_toggle">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPassword" android:singleLine="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/remember_password" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="记住密码，下次自动填写账号和密码" android:textColor="@color/forest" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button" android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginTop="28dp" android:text="@string/login_button"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="18dp" android:text="@string/demo_account"
+            android:gravity="center" android:textColor="@color/muted" android:textSize="13sp"/>
+    </LinearLayout>
+</ScrollView>

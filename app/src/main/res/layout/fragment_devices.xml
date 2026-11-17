@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="18dp" android:orientation="vertical">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="设备控制" android:textSize="24sp" android:textColor="@color/forest" android:textStyle="bold"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/device_hint" android:textSize="14sp" android:textColor="@color/muted"/>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" app:cardCornerRadius="12dp" app:cardElevation="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:orientation="vertical">
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switch_vent" android:layout_width="match_parent" android:layout_height="56dp" android:text="通风机" android:textSize="17sp" android:textColor="@color/forest"/>
+                <TextView android:id="@+id/device_rule_vent" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="10dp" android:textSize="13sp" android:lineSpacingExtra="2dp" android:textColor="@color/muted"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup android:id="@+id/mode_vent" android:layout_width="match_parent" android:layout_height="48dp" app:singleSelection="true" app:selectionRequired="true">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/mode_auto_vent" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="自动" android:textSize="13sp"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/mode_manual_vent" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="手动" android:textSize="13sp"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:cardCornerRadius="12dp" app:cardElevation="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:orientation="vertical">
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switch_pump" android:layout_width="match_parent" android:layout_height="56dp" android:text="灌溉水泵" android:textSize="17sp" android:textColor="@color/forest"/>
+                <TextView android:id="@+id/device_rule_pump" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="10dp" android:textSize="13sp" android:lineSpacingExtra="2dp" android:textColor="@color/muted"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup android:id="@+id/mode_pump" android:layout_width="match_parent" android:layout_height="48dp" app:singleSelection="true" app:selectionRequired="true">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/mode_auto_pump" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="自动" android:textSize="13sp"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/mode_manual_pump" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="手动" android:textSize="13sp"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:cardCornerRadius="12dp" app:cardElevation="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:orientation="vertical">
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switch_light" android:layout_width="match_parent" android:layout_height="56dp" android:text="补光灯" android:textSize="17sp" android:textColor="@color/forest"/>
+                <TextView android:id="@+id/device_rule_light" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="10dp" android:textSize="13sp" android:lineSpacingExtra="2dp" android:textColor="@color/muted"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup android:id="@+id/mode_light" android:layout_width="match_parent" android:layout_height="48dp" app:singleSelection="true" app:selectionRequired="true">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/mode_auto_light" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="自动" android:textSize="13sp"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/mode_manual_light" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="手动" android:textSize="13sp"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
